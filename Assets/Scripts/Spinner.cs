@@ -14,7 +14,7 @@ public class Spinner : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Quaternion deltaRotation = Quaternion.Euler(xAngle * Time.deltaTime, yAngle * Time.deltaTime, zAngle * Time.deltaTime);
         rb.MoveRotation(rb.rotation * deltaRotation);

@@ -20,7 +20,7 @@ public class FlyAtPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (transform.position != playerPosition)
         {
