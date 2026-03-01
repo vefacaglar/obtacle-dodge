@@ -3,10 +3,9 @@ using UnityEngine;
 
 public class FlyAtPlayer : MonoBehaviour
 {
-    private Transform player;
     [SerializeField] private float speed = 1f;
+    private Vector3 playerPosition;
 
-    Vector3 playerPosition;
 
     void Awake()
     {
@@ -17,8 +16,7 @@ public class FlyAtPlayer : MonoBehaviour
     void Start()
     {
         var playerGameObject = GameObject.FindWithTag("Player");
-        player = playerGameObject.transform;
-        playerPosition = player.position;
+        playerPosition = playerGameObject.transform.position;
     }
 
     // Update is called once per frame
