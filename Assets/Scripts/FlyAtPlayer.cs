@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class FlyAtPlayer : MonoBehaviour
 {
-    [SerializeField] private Transform player;
+    private Transform player;
     [SerializeField] private float speed = 1f;
 
     Vector3 playerPosition;
@@ -16,6 +16,8 @@ public class FlyAtPlayer : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        var playerGameObject = GameObject.FindWithTag("Player");
+        player = playerGameObject.transform;
         playerPosition = player.position;
     }
 
